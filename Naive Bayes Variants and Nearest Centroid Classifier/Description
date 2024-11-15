@@ -1,0 +1,167 @@
+# Implementation and Evaluation of Naive Bayes Variants and Nearest Centroid Classifier
+
+---
+
+## Overview
+
+This project implements five classification algorithms **from scratch** and evaluates their performance on various datasets. The algorithms included are:
+
+1. **Bernoulli Naive Bayes (BernoulliNB)**  
+2. **Complement Naive Bayes (ComplementNB)**  
+3. **Gaussian Naive Bayes (GaussianNB)**  
+4. **Nearest Centroid Classifier**  
+5. **Multinomial Naive Bayes (MultinomialNB)**  
+
+The primary goal is to implement these classifiers from the ground up to better understand their workings and evaluate their performance on multiple datasets.
+
+---
+
+## Table of Contents
+
+1. [Dataset Description](#dataset-description)  
+2. [Project Highlights](#project-highlights)  
+3. [Implemented Algorithms](#implemented-algorithms)  
+   - [Bernoulli Naive Bayes](#1-bernoulli-naive-bayes)  
+   - [Complement Naive Bayes](#2-complement-naive-bayes)  
+   - [Gaussian Naive Bayes](#3-gaussian-naive-bayes)  
+   - [Nearest Centroid Classifier](#4-nearest-centroid-classifier)  
+   - [Multinomial Naive Bayes](#5-multinomial-naive-bayes)  
+4. [Installation](#installation)  
+5. [Results](#results)  
+6. [Conclusion](#conclusion)
+
+---
+
+## Dataset Description
+
+The project uses the following datasets for training and testing:
+
+- **Iris Dataset**  
+- **MNIST Dataset**  
+- **Breast Cancer Dataset**  
+- **Digits Dataset**  
+- **Spambase Dataset**  
+- **Diabetes Dataset**  
+- **Fashion MNIST Dataset**  
+- **Banknote Authentication Dataset**  
+- **Titanic Dataset**  
+- **Blood Transfusion Dataset**  
+- **Liver Disorders Dataset**  
+- **Credit Approval Dataset**  
+- **Mushroom Dataset**  
+- **Phishing Dataset**  
+
+Each dataset has its unique characteristics, ranging from binary classification (e.g., Titanic, Spambase) to multi-class classification (e.g., Iris, Digits). The models are trained and evaluated on each dataset using standard machine learning practices.
+
+---
+
+## Project Highlights
+
+- **Custom Implementation**: Each algorithm is implemented from scratch, which provides transparency and a deeper understanding of their inner workings.  
+- **Comprehensive Evaluation**: The algorithms are evaluated on a variety of datasets, making it easier to compare their performance in different scenarios.  
+- **Scalable Framework**: The modular design allows for easy integration of other classifiers or datasets for further experiments.
+
+---
+
+## Implemented Algorithms
+
+### 1. Bernoulli Naive Bayes  
+- **Assumptions**: Features are binary (0 or 1).  
+- **Details**:
+  - Features are binarized (values > 0 are converted to 1, others to 0).  
+  - Class probabilities and likelihoods are calculated using binary feature counts.  
+  - Predictions use the log-probability formula to prevent underflow errors.  
+
+---
+
+### 2. Complement Naive Bayes  
+- **Specialty**: Tailored for imbalanced datasets.  
+- **Details**:
+  - Class probabilities are complemented by focusing on the likelihood of all other classes.  
+  - Smoothed feature probabilities are calculated to handle zero probabilities.
+
+---
+
+### 3. Gaussian Naive Bayes  
+- **Assumptions**: Features follow a Gaussian (normal) distribution.  
+- **Details**:
+  - Calculates the mean and variance of features for each class.  
+  - The Gaussian Probability Density Function (PDF) is used to compute class probabilities for predictions.
+
+---
+
+### 4. Nearest Centroid Classifier  
+- **Specialty**: A simple yet effective distance-based classifier.  
+- **Details**:
+  - Calculates centroids (mean feature values) for each class.  
+  - Predictions are based on the Euclidean distance between samples and class centroids.
+
+---
+
+### 5. Multinomial Naive Bayes  
+- **Specialty**: Suitable for count data (e.g., text classification).  
+- **Details**:
+  - Computes class priors and likelihoods using frequency counts of features.  
+  - Uses Laplace smoothing to avoid zero probabilities.
+
+---
+
+## Installation
+
+To run this project, you need the following dependencies:
+
+- Python 3.6 or later  
+- Required libraries: `numpy`, `pandas`, `scikit-learn`
+
+Install dependencies using pip:
+
+```bash
+pip install numpy pandas scikit-learn
+```
+
+---
+
+## Results
+
+The implemented models have been trained and tested on a wide range of datasets, including but not limited to:
+
+- **Iris Dataset**
+- **MNIST Dataset**
+- **Breast Cancer Dataset**
+- **Digits Dataset**
+- **Spambase Dataset**
+- **Diabetes Dataset**
+- **Fashion MNIST Dataset**
+- **Banknote Authentication Dataset**
+- **Titanic Dataset**
+- **Blood Transfusion Dataset**
+- **Liver Disorders Dataset**
+- **Credit Approval Dataset**
+- **Mushroom Dataset**
+- **Phishing Dataset**
+
+Each dataset has been used to evaluate the performance of the five classifiers: Bernoulli Naive Bayes, Complement Naive Bayes, Gaussian Naive Bayes, Nearest Centroid, and Multinomial Naive Bayes.
+
+The evaluation is conducted using standard machine learning practices, and the results are used to compare how each model performs across different types of data. The accuracy and other evaluation metrics (if applicable) are calculated for each dataset and summarized for the user to understand the relative performance of the models.
+
+---
+
+## Conclusion
+
+This project provides a comprehensive exploration of the **Naive Bayes** family of classifiers and the **Nearest Centroid** classifier, all implemented from scratch. By training and testing these models on a variety of real-world datasets, we can observe how each model performs under different conditions and gain insights into their strengths and weaknesses.
+
+Key takeaways:
+
+- **Gaussian Naive Bayes** performs well for datasets with Gaussian-distributed features.  
+- **Complement Naive Bayes** is effective on imbalanced datasets, such as Spambase.  
+- **Bernoulli Naive Bayes** struggles when features contain continuous values, as it assumes binary features.  
+- The **Nearest Centroid Classifier** offers a simple, intuitive method for classification, especially for smaller datasets.  
+- **Multinomial Naive Bayes** excels with count-based data, such as text classification tasks.
+
+The project’s modular structure allows for easy extension with additional classifiers or datasets. Future work can explore the implementation of more advanced models, such as **SVM** or **Random Forest**, and apply these classifiers to more challenging datasets.
+
+---
+
+## Acknowledgments
+
+The implementation is inspired by the desire to understand machine learning algorithms from the ground up. Special thanks to the creators of the various datasets used for benchmarking, which are widely available in the public domain and are invaluable resources for machine learning practitioners.
