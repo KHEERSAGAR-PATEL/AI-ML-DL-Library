@@ -1,6 +1,6 @@
 ---
 
-# 🧠 Lightweight ML/DL Library Engineered from Scratch
+## 🧠 Lightweight ML/DL Library Engineered from Scratch
 
 > A self-built, scalable machine learning and deep learning library written from the ground up — **no TensorFlow, no PyTorch**, just raw mathematics and engineering.
 
