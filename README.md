@@ -34,6 +34,7 @@ This project demonstrates the **fundamental mechanics of ML and DL systems**, im
 - Adam Optimizer (manual implementation), and more  
 
 ### 🧱 Deep Learning Components
+- RNN, LSTM ,GRU from scratch implementation
 - Dense Layers  
 - ReLU / Sigmoid / Tanh Activations  
 - Loss Functions: MSE, Binary Cross-Entropy, Categorical Cross-Entropy  
@@ -85,6 +86,7 @@ Performance results show **<5% deviation from TensorFlow/PyTorch baselines** on 
 
 **Kheer Sagar Patel**  
 *M.Tech CSE (AI & ML), IIITDM Jabalpur*  
+*Phd first sem @ IIT Bhilai*
 
 ---
 
